@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Contact Email</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+
+    <h2>Send Contact Email for {{ contact.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">Recipient Email:</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Email</button>
+    </form>
+</div>
+</body>
+</html>
